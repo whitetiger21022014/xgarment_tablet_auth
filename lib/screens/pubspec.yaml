@@ -1,0 +1,30 @@
+name: xgarment_tablet_auth
+description: XGarment Tablet Authen Demo App
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_inappwebview: ^6.0.0
+  qr_code_scanner: ^1.0.1
+  permission_handler: ^11.3.0
+  device_info_plus: ^10.1.0
+  connectivity_plus: ^5.0.2
+  awesome_dialog: ^3.2.0
+  path_provider: ^2.1.3
+  shared_preferences: ^2.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/config.json
+    - assets/companyDefault_logo.png
+    # Thêm các logo khác nếu cần: assets/{companyBrief}_logo.png
