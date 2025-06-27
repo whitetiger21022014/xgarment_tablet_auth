@@ -1,0 +1,2 @@
+-keep class android.window.** { *; }
+-dontwarn android.window.**
