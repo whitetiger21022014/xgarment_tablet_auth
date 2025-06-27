@@ -1,6 +1,0 @@
-{
-  "companyBrief": "demo",
-  "logoPath": "assets/companyDefault_logo.png",
-  "apiBase": "https://192.168.10.10",
-  "apiPort": 8080
-}
