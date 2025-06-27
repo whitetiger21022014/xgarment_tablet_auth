@@ -1,4 +1,12 @@
-// File: android/app/build.gradle
+// android/app/build.gradle
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
 
 def flutterRoot = localProperties.getProperty('flutter.sdk')
 def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
@@ -11,7 +19,6 @@ android {
     compileSdkVersion 34
 
     defaultConfig {
-        // Ứng dụng của bạn
         applicationId "com.example.xgarment_tablet_auth"
         minSdkVersion 21
         targetSdkVersion 34
@@ -22,11 +29,9 @@ android {
 
     buildTypes {
         release {
-            // Bật minify & shrinkResources để tối ưu APK
             minifyEnabled true
             shrinkResources true
             signingConfig signingConfigs.release
-            // Sử dụng proguard-rules.pro để keep các class cần thiết (fix inappwebview)
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
@@ -35,18 +40,9 @@ android {
         }
     }
 
-    // Nếu bạn dùng flavor thì giữ lại phần này
-    // flavorDimensions "default"
-    // productFlavors { ... }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    // Nếu cần hỗ trợ vector drawable
-    buildFeatures {
-        viewBinding true
     }
 }
 
