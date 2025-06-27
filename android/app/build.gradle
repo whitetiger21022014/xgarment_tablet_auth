@@ -31,7 +31,9 @@ android {
         release {
             minifyEnabled true
             shrinkResources true
-            signingConfig signingConfigs.release
+            // signingConfig signingConfigs.release
+            // Nếu bạn đã có file keystore và muốn ký APK,
+            // hãy thêm khối signingConfig đầy đủ phía trên (và file key.properties, v.v.)
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
