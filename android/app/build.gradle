@@ -30,8 +30,8 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
+            minifyEnabled false      // <- Tắt minify
+            shrinkResources false    // <- Tắt shrink
             // signingConfig signingConfigs.release
             // Nếu bạn đã có file keystore và muốn ký APK,
             // hãy thêm khối signingConfig đầy đủ phía trên (và file key.properties, v.v.)
