@@ -13,7 +13,7 @@ class ApiService {
   static Future<String> getDeviceId() async {
     final deviceInfo = DeviceInfoPlugin();
     final info = await deviceInfo.androidInfo;
-    return info.id ?? info.androidId ?? "unknown_device";
+    return info.id ?? "unknown_device";
   }
 
   static Future<ApiResponse> login({
