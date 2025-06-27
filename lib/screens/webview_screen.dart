@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:flutter_inappwebview_platform_interface/flutter_inappwebview_platform_interface.dart';
+
 
 class WebviewScreen extends StatefulWidget {
   final String initialUrl;
@@ -37,7 +39,7 @@ class _WebviewScreenState extends State<WebviewScreen> {
       body: Stack(
         children: [
           InAppWebView(
-            initialUrlRequest: URLRequest(url: Uri.parse(widget.initialUrl)),
+            initialUrlRequest: URLRequest(url: WebUri(widget.initialUrl)),
             initialOptions: InAppWebViewGroupOptions(
               crossPlatform: InAppWebViewOptions(
                 javaScriptEnabled: true,
