@@ -1,2 +1,10 @@
 -keep class android.window.** { *; }
 -dontwarn android.window.**
+-keep class android.window.** { *; }
+-dontwarn android.window.**
+-keep class io.flutter.embedding.** { *; }
+-dontwarn io.flutter.embedding.**
+-keep class io.flutter.plugin.** { *; }
+-dontwarn io.flutter.plugin.**
+-keep class io.flutter.** { *; }
+-dontwarn io.flutter.**
