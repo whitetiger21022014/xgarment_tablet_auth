@@ -14,4 +14,4 @@
 ## Các bước build
 1. flutter pub get
 2. flutter build apk --debug
-3. sẽ test thử
+3. sẽ test thử, test
